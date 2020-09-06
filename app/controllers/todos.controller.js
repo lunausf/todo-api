@@ -46,7 +46,7 @@ exports.createToDoItem = (req, res) => {
   const todoitem= {
     listid: req.body.listId,
     description: req.body.description,
-    status: req.body.status
+    status: req.body.status ? req.body.status : "todo"
   };
 
   //save todoitem in the database
